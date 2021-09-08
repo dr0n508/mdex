@@ -1,0 +1,966 @@
+<!-- Modal -->
+<div class="modal modal-custom fade" id="assetModal" tabindex="-1" role="dialog" aria-labelledby="assetModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header d-block">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="input-group input-group-modal">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <img src="img/search-icon.svg" alt="">
+            </div>
+          </div>
+          <input id="filterAsset" type="text" class="form-control">
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-content-wrapper d-flex flex-column">
+          <button class="filter-item active" data-filter="USDT TetherUS">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/USDT-TetherUS.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">USDT</div>
+                <div class="option-name">TetherUS</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="ETH Ethereum">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/ETC-Ethereum_Classic.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">ETH</div>
+                <div class="option-name">Ethereum</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="BTC Bitcoin">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/BTC-Bitcoin.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">BTC</div>
+                <div class="option-name">Bitcoin</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="BCH Bitcoin Cash">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/BCH-Bitcoin_Cash.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">BCH</div>
+                <div class="option-name">Bitcoin Cash</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="DOT Polkadot">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/DOT-Polkadot.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">DOT</div>
+                <div class="option-name">Polkadot</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="FIL Filecoin">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/FIL-Filecoin.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">FIL</div>
+                <div class="option-name">Filecoin</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="ADA Cardano">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/ADA-Cardano.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">ADA</div>
+                <div class="option-name">Cardano</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="LTC Litecoin">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/LTC-Litecoin.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">LTC</div>
+                <div class="option-name">Litecoin</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="ATOM Cosmos">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/ATOM-Cosmos.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">ATOM</div>
+                <div class="option-name">Cosmos</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="ONT Ontology">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/ONT-Ontology.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">ONT</div>
+                <div class="option-name">Ontology</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="LINK ChainLink">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/LINK-ChainLink.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">LINK</div>
+                <div class="option-name">ChainLink</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="DAI Dai">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/DAI-Dai.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">DAI</div>
+                <div class="option-name">Dai</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="EOS EOS">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/EOS-EOS.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">EOS</div>
+                <div class="option-name">EOS</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="BAND BAND">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/BAND-BAND.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">BAND</div>
+                <div class="option-name">BAND</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="XRP Ripple">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/XRP-Ripple.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">XRP</div>
+                <div class="option-name">Ripple</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="XTZ Tezos">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/XTZ-Tezos.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">XTZ</div>
+                <div class="option-name">Tezos</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="BAT Basic Attention Token">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/BAT-Basic_Attention_Token.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">BAT</div>
+                <div class="option-name">Basic Attention Token</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="SNX Synthetix Network Token">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/SNX-synthetix_network_token.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">SNX</div>
+                <div class="option-name">Synthetix Network Token</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="UNI Uniswap">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/UNI_Uniswap.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">UNI</div>
+                <div class="option-name">Uniswap</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="YFII DFI.Money">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/YFII-DFI_Money.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">YFII</div>
+                <div class="option-name">DFI.Money</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="YFI yearn.finance">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/YFI-yearn_finance.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">YFI</div>
+                <div class="option-name">yearn.finance</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="BUSD BUSD">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/BUSD-BUSD.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">BUSD</div>
+                <div class="option-name">BUSD</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="NEAR Protocol">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/NEAR-NEAR_Protocol.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">NEAR</div>
+                <div class="option-name">NEAR Protocol</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="ZEC Zcash">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/ZEC-Zcash.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">ZEC</div>
+                <div class="option-name">Zcash</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="COMP Compound">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/COMP-Compound.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">COMP</div>
+                <div class="option-name">Compound</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="MKR Maker">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/MKR-Maker.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">MKR</div>
+                <div class="option-name">Maker</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="TCT TokenClub Token">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/TCT-TokenClub_Token.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">TCT</div>
+                <div class="option-name">TokenClub Token</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="IOTX IoTeX">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/IOTX-IoTeX.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">IOTX</div>
+                <div class="option-name">IoTeX</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="BEL Bella Protocol">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/BEL-Bella_Protocol.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">BEL</div>
+                <div class="option-name">Bella Protocol</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="ELF aelf">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/ELF-aelf.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">ELF</div>
+                <div class="option-name">aelf</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="PAX Paxos Standard">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/PAX-Paxos_Standard.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">PAX</div>
+                <div class="option-name">Paxos Standard</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="USDC USD Coin">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/USDC-USD_Coin.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">USDC</div>
+                <div class="option-name">USD Coin</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="INJ Injective Protocol">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/INJ-Injective_Protocol.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">INJ</div>
+                <div class="option-name">Injective Protocol</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="SXP Swipe">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/SXP-Swipe.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">SXP</div>
+                <div class="option-name">Swipe</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="ETC Ethereum Classic">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/ETC-Ethereum_Classic.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">ETC</div>
+                <div class="option-name">Ethereum Classic</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="EGLD Elrond eGold">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/EGLD-Elrond_eGold.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">EGLD</div>
+                <div class="option-name">Elrond eGold</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="COCOS Cocos-BCX">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/COCOS-Cocos_BCX.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">COCOS</div>
+                <div class="option-name">Cocos-BCX</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="FRONT Frontier">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/FRONT-Frontier.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">FRONT</div>
+                <div class="option-name">Frontier</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="BURGER Burger Swap">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/BURGER-Burger_Swap.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">BURGER</div>
+                <div class="option-name">Burger Swap</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="FOR ForTube">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/FOR-ForTube.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">FOR</div>
+                <div class="option-name">ForTube</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="DOGE Dogecoin">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/DOGE-Dogecoin.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">DOGE</div>
+                <div class="option-name">Dogecoin</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="SUSHI Sushi">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/SUSHI-Sushi.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">SUSHI</div>
+                <div class="option-name">Sushi</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="AAVE Aave">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/AAVE-Aave.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">AAVE</div>
+                <div class="option-name">Aave</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="DODO">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/DODO-DODO.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">DODO</div>
+                <div class="option-name">DODO</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="1INCH 1inch">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/1INCH-1inch.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">1INCH</div>
+                <div class="option-name">1inch</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="NULS Nuls">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/NULS-Nuls.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">NULS</div>
+                <div class="option-name">Nuls</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="CREAM Cream Finance">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/CREAM-Cream_Finance.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">CREAM</div>
+                <div class="option-name">Cream Finance</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="MDA Moeda Loyalty Points">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/MDA-Moeda_Loyalty_Points.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">MDA</div>
+                <div class="option-name">Moeda Loyalty Points</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="DUSK Dusk Network">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/DUSK-Dusk_Network.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">DUSK</div>
+                <div class="option-name">Dusk Network</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="ORN Orion Protocol">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/ORN-Orion_Protocol.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">ORN</div>
+                <div class="option-name">Orion Protocol</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="DEXE DeXe">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/DEXE-DeXe.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">DEXE</div>
+                <div class="option-name">DeXe</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="LTO LTO Network">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/LTO-LTO_Network.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">LTO</div>
+                <div class="option-name">LTO Network</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="REEF Reef Finance">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/REEF-Reef_Finance.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">REEF</div>
+                <div class="option-name">Reef Finance</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="COS Contentos">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/COS-Contentos.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">COS</div>
+                <div class="option-name">Contentos</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="DEGO Dego Finance">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/DEGO-Dego_Finance.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">DEGO</div>
+                <div class="option-name">Dego Finance</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="MATIC Polygon">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/MATIC-Polygon.jpg">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">MATIC</div>
+                <div class="option-name">Polygon</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="CTSI Cartesi">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/CTSI-Cartesi.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">CTSI</div>
+                <div class="option-name">Cartesi</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="BNT Bancor">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/BNT-Bancor.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">BNT</div>
+                <div class="option-name">Bancor</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="BZRX bZx Protocol">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/BZRX-bZx_Protocol.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">BZRX</div>
+                <div class="option-name">bZx Protocol</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="MDT Measurable Data Token">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/MDT-Measurable_Data_Token.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">MDT</div>
+                <div class="option-name">Measurable Data Token</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="PNT pNetwork">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/PNT-pNetwork.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">PNT</div>
+                <div class="option-name">pNetwork</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="KMD Komodo">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/KMD-Komodo.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">KMD</div>
+                <div class="option-name">Komodo</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="AVAX Avalanche">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/AVAX-Avalanche.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">AVAX</div>
+                <div class="option-name">Avalanche</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="IDEX IDEX">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/IDEX-IDEX.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">IDEX</div>
+                <div class="option-name">IDEX</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="PERL Perlin">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/PERL-Perlin.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">PERL</div>
+                <div class="option-name">Perlin</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item suspended" disabled="" data-filter="IOTA MIOTA">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/IOTA-MIOTA.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">IOTA</div>
+                <div class="option-name">MIOTA</div>
+              </div>
+            </div>
+            <div class="title-suspended">suspended</div>
+          </button>
+
+          <button class="filter-item" data-filter="BAL Balancer">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/BAL-Balancer.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">BAL</div>
+                <div class="option-name">Balancer</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="VIDT VIDT Datalink">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/VIDT-VIDT_Datalink.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">VIDT</div>
+                <div class="option-name">VIDT Datalink</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="FXS Frax Share">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/FXS-Frax_Share.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">FXS</div>
+                <div class="option-name">Frax Share</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="BLZ Bluzelle">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/BLZ-Bluzelle.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">BLZ</div>
+                <div class="option-name">Bluzelle</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="ADX AdEx">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/ADX-AdEx.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">ADX</div>
+                <div class="option-name">AdEx</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="OAX openANX">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/OAX-openANX.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">OAX</div>
+                <div class="option-name">openANX</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="COTI COTI">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/COTI-COTI.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">COTI</div>
+                <div class="option-name">COTI</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="LOOM Loom Network">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/LOOM-Loom_Network.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">LOOM</div>
+                <div class="option-name">Loom Network</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="FIRO Firo">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/FIRO-Firo.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">FIRO</div>
+                <div class="option-name">Firo</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="TRU TrueFi">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/TRU-TrueFi.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">TRU</div>
+                <div class="option-name">TrueFi</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="CELR Celer Network">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/CELR-Celer_Network.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">CELR</div>
+                <div class="option-name">Celer Network</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="UFT UniLend">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/UFT-UniLend.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">UFT</div>
+                <div class="option-name">UniLend</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="QKC QuarkChain">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/QKC-QuarkChain.png"></div>
+              <div class="option-desciption">
+                <div class="option-symbol">QKC</div>
+                <div class="option-name">QuarkChain</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="CVP PowerPool">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/CVP-PowerPool.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">CVP</div>
+                <div class="option-name">PowerPool</div>
+              </div>
+            </div>
+          </button>
+
+          <button class="filter-item" data-filter="MASK Mask Network">
+            <div class="d-flex">
+              <div class="single-img">
+                <img src="img/icon/MASK-Mask_Network.png">
+              </div>
+              <div class="option-desciption">
+                <div class="option-symbol">MASK</div>
+                <div class="option-name">Mask Network</div>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
