@@ -523,4 +523,19 @@ h1, h2, h3, h4 {
     .home-count__wrap .count-wrap:last-child {
       border-bottom: none; }
 
+.main-slider {
+  height: 400px; }
+  .main-slider .carousel-inner {
+    height: 100%; }
+    .main-slider .carousel-inner .carousel-item {
+      height: 100%; }
+      .main-slider .carousel-inner .carousel-item img {
+        -o-object-fit: cover;
+           object-fit: cover;
+        width: 100%;
+        height: 100%; }
+  @media only screen and (max-width: 768px) {
+    .main-slider {
+      height: 250px; } }
+
 /*# sourceMappingURL=css/main.min.css.map */
