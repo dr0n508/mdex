@@ -6,3 +6,26 @@
 .btn-rounded {
   border-radius: 10em;
 }
+
+.navbar .dropdown-menu a {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  //color: #626e88;
+}
+
+.navbar .dropdown-menu a:not(.active) {
+  color: #626e88;
+}
+
+.dropdown-menu {
+  min-width: 6rem;
+  border: none;
+}
+
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #041843;
+  text-decoration: none;
+  background-color: transparent;
+}

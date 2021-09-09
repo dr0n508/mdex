@@ -23,42 +23,30 @@
 
 
 .slide-out-panel {
+  font-size: 13px;
+  font-weight: 500;
   .modal-content {
     height: 100vh;
     background: #f0f2f3;
-
     .modal-body {
       .header {
         background: #fff;
         border-radius: 10px;
         padding: 15px 0;
-
-
-
         .item {
           text-align: center;
-          //display: flex;
-          //flex-direction: column;
-          //justify-content: center;
-          //align-items: center;
-
           width: 25%;
           p {
             margin-top: 10px;
             margin-bottom: 0;
-            //color: #000;
-            font-size: 13px;
             line-height: 1;
           }
-
           img {
             width: 36px;
             height: 36px;
           }
         }
       }
-
-
       .content {
         background: #fff;
         border-radius: 10px;
@@ -69,6 +57,11 @@
           height: 48px;
           display: flex;
           align-items: center;
+          a {
+            display: flex;
+            align-items: center;
+            width: 100%;
+          }
           img {
             width: 24px;
             height: 24px;
@@ -80,19 +73,14 @@
             right: 0;
             top: 50%;
             margin-top: -8px;
-
             display: block;
             width: 16px;
             height: 16px;
             background: url("../img/icon/header/slide-out-panel/main/arr-right-aside-icon.png");
             background-size: 16px;
-
           }
         }
-
       }
     }
-
-
   }
 }

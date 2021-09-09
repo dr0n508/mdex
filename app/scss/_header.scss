@@ -89,20 +89,30 @@
 ////mobile header
 
 .modal {
+
+  .modal-header {
+    border-bottom: none;
+  }
+
   .modal-body {
 
     .select-language {
+      margin-bottom: 30px;
       .select-info {
         width: 33.33%;
         height: 50px;
         line-height: 50px;
         text-align: center;
+        font-size: 14px;
+        color: #48587b;
+        font-weight: 500;
 
         border: 1px solid #dce3ec;
       }
       .select-info.active {
         background: #2c72f4;
         color: #fff;
+        border: none;
       }
     }
 
@@ -112,6 +122,11 @@
         height: 60px;
         display: flex;
         align-items: center;
+        a {
+          //font-size: 14px;
+          color: #48587b;
+          font-weight: 500;
+        }
         img {
           width: 20px;
           height: 20px;
@@ -119,6 +134,29 @@
         }
       }
 
+    }
+    .aff-emai {
+      font-size: 14px;
+      font-weight: 500;
+      color: #9aa2b7;
+    }
+  }
+}
+
+
+.lang-bar-button {
+  padding: .5rem 0;
+}
+
+.lang-bar-dropdown.dropdown-menu {
+  min-width: 10rem;
+  top: 100%;
+  right: 0;
+  .dropdown-item  {
+    img {
+      width: 16px;
+      height: 16px;
+      margin-right: 7px;
     }
   }
 }
