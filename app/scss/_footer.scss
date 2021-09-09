@@ -1,0 +1,37 @@
+.footer-mobile {
+  box-shadow: 0 -3px 5px 0 rgba(135,132,132,.05);
+  background-color: white;
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .badge {
+      position: absolute;
+      right: -20px;
+    }
+    .icon-home {
+      background: url("../img/icon/footer/home-icon.png");
+    }
+    .icon-swap {
+      background: url("../img/icon/footer/swap-icon.png");
+    }
+    .icon-farm {
+      background: url("../img/icon/footer/farm-icon.png");
+    }
+    .icon-charts {
+      background: url("../img/icon/footer/charts-icon.png");
+      &:before {}
+
+    }
+    .icon-boardroom {
+      background: url("../img/icon/footer/boardroom.png");
+    }
+    .icon {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      margin: 0 auto 3px;
+      background-size: 24px;
+    }
+  }
+}

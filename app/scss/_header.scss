@@ -1,0 +1,65 @@
+.navbar-brand {
+  max-width: 150px;
+  &:hover {
+    transform: rotate(-5deg);
+  }
+}
+
+.navbar-nav {
+  width: 100%;
+}
+
+.lang_bar {
+  img {
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
+  }
+}
+
+.w-bage {
+  img {
+    position: relative;
+    width: 30px;
+    height: 15px;
+    top: -6px;
+    left: 2px;
+  }
+}
+
+////mobile header
+
+.modal {
+  .modal-body {
+
+    .select-language {
+      .select-info {
+        width: 33.33%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+
+        border: 1px solid #dce3ec;
+      }
+      .select-info.active {
+        background: #2c72f4;
+        color: #fff;
+      }
+    }
+
+    .social-list-nav {
+      li {
+        width: 50%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        img {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>binance_bridge</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<meta name="description" content="Home page">
+
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+
+	<!-- Style -->
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">-->
+
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+
+
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+  <header>
+  <nav class="navbar fixed-top navbar-dark navbar-expand-lg">
+    <a class="navbar-brand" href="#">
+      <img src="img/main-logo.png">
+    </a>
+    <button class="navbar-toggler order-first" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      +
+    </button>
+
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav justify-content-between mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Swap</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pool</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Liquidity</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Trading</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Boardroom</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Bridge</a>
+        </li>
+
+
+        <li class="nav-item w-bage">
+          <a class="nav-link" href="#">Charts <img src="img/beta-badge.png" alt="">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Burning black hole</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">DAO</a>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            HECO
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">ETH</a>
+            <a class="dropdown-item" href="#">BSC</a>
+            <a class="dropdown-item" href="#">HECO</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <button type="button" class="btn btn-primary">Connect your wallet</button>
+        </li>
+
+
+        <div class="lang_bar dropdown dropleft">
+          <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="img/btn-dropdown-dots.png" alt="">
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#"><img src="img/news-icon.png" alt="">News</a>
+            <a class="dropdown-item" href="#"><img src="img/info-icon.png" alt="">Info</a>
+            <a class="dropdown-item" href="#"><img src="img/language-icon.png" alt="">Language</a>
+          </div>
+        </div>
+
+
+
+
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1"  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!--<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>-->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+
+        <div class="select-language d-flex flex-wrap">
+          <div class="select-info active"> English</div>
+          <div class="select-info"> 简体中文</div>
+          <div class="select-info"> 繁体中文</div>
+          <div class="select-info"> 日本語</div>
+          <div class="select-info"> Türk</div>
+          <div class="select-info"> 한국어</div>
+          <div class="select-info"> Россия</div>
+        </div>
+
+        <div class="social-list-nav">
+          <ul class="d-flex flex-wrap">
+            <li><a href="#"><img src="img/icon/header/social-modal/github-icon-modal.png" alt="">GitHub</a></li>
+            <li><a href="#"><img src="img/icon/header/social-modal/medium-icon-modal.png" alt="">Medium</a></li>
+            <li><a href="#"><img src="img/icon/header/social-modal/telegram-icon-modal.png" alt="">Telegram</a></li>
+            <li><a href="#"><img src="img/icon/header/social-modal/twitter-icon-modal.png" alt="">Twitter</a></li>
+            <li><a href="#"><img src="img/icon/header/social-modal/discord-icon-modal.png" alt="">Discord</a></li>
+          </ul>
+
+        </div>
+
+        <div class="aff-emai">
+            <span> Business cooperation：business@mdex.com</span></div>
+
+        
+      </div>
+      <!--<div class="modal-footer">-->
+        <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+      <!--</div>-->
+    </div>
+  </div>
+</div>
+	<main class="main">
+
+  <div class="container">
+    <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+      <thead>
+      <tr>
+        <th class="th-sm">LP
+        </th>
+        <th class="th-sm">Daily Output
+        </th>
+        <th class="th-sm">Monthly output
+        </th>
+        <th class="th-sm"> Value Locked
+        </th>
+        <th class="th-sm">APR
+        </th>
+        <th class="th-sm">Your Reward
+        </th>
+        <th class="th-sm">
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+
+
+
+      <tr>
+        <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+          <div class="cell">
+            <div data-v-70792e1d="" class="Trades-one">
+              <img data-v-70792e1d="" src="https://mdex.co/token-icons/heco/lp/0x499b6e03749b4baf95f9e70eed5355b138ea6c31.png"><span data-v-70792e1d="" class="td-span numbers SemiBold" style="margin-left: 10px;"> WHT/USDT</span>
+            </div>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_2  ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span"><span data-v-0abbdf5a="" data-v-70792e1d="">18,022.58</span> MDX </span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_3  ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span"><span data-v-0abbdf5a="" data-v-70792e1d="">540,677.38</span> MDX </span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_4  ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span">  $<span data-v-0abbdf5a="" data-v-70792e1d="">39.06M</span></span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_5  ">
+          <div class="cell">
+            <div data-v-70792e1d="" class="apy-class"><span data-v-0abbdf5a="" data-v-70792e1d="">30.75</span>% <!---->
+              <div data-v-70792e1d="" class="topic">
+                <img data-v-70792e1d="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADtklEQVRYR8VXW0xUVxRde+517sRxtOJjRlqFUBQi8UW0QagVjYjVFsSa/rQ1/eiPbyXGxJiSFCMmNbGMjZgYjf4YE6MgVsSkVWhNyCgJNSpvYklVQInG8BAGmdnmHjrjzICcO4Rm5mM+9l177XX2PnufcwgGf0m1F82Nzc9WMXuziHk+QNHMiNbdidAGcBsT1RGZribMtVfUJn09YISaZCBr2QlHf/9gHgjfgHmyDC++E3WBcd5iUfN7N2zvGM3nvQLirx/XWt18kL2cC8BqKPBwUC+Z6FisRodb1u9yj8QxogB91W73YAkzp4wxcJAbEbk0Tc0ZKRvDBJhLCxd6PFQG5o/GI7ifg+iJovCGgew99wN5gwSIersHq8c9uC8i0ROLpi4LzIRfgKh5P1eOV9rflz29HLEWSvftCb8AtcSZz17+0Uja1zti8YUjDjHWydAJ6rpewPWyA5eeNhtxB5no0GDO7jzRMPrfUKu9aZHtdptqRllaNlKnifYf9qt60YZv797Av33dMiG9FsuEeL0UQoBy2VkE8FaZ12+p2fjcETsqTBeR/ucleMESOjrp+Wr3NtInXENje6dsyCTapuJhxhZB6mVGQcNdVHQ+hokIadOicSBhGTRFFd+zqkpxvaN1dAFEXYkJs2aQeuXXTPZ4bshWnzs3GT8vWCFg51pr8UPNH0EuBUlp2J+wVNgO1d/BT/UuGSVIUdaRUuI8AS9vk6FTohy4lroRmqIg+eZ5NPe8CnIpTvkSWdFxwpZf70J+/R0ZJWCiIlKLCyuYkS5HAx9M0ETKXw70++F2bSLOLl2LtfYYv+2TWxdQ8+q5lJIIlaQWOxuZeZ4UPQJgvi0Kv6/YBLvl3VFxvOVv5N7/yxAdETWRctnZDfAkQx4hoIcZ3yHRFiWsHvbiSEO1qL1s/7+joZ4xC8iYOQfln+YIru43A9jsuoabnY/DWwehe8wl2BufjKMLh7qisLkG+x7cDi+4uDZQU1ibMDDCzo8X45dFK4Upr7YKBY3VYxCASsNtGMo+y2JF6fIs0ZYbq67in9ddYQsYakODgyh8drmHGERGR3Eo3WfTP8Sp5DUwm0zYca9CPnpDCXyjWLcbPYwCOeoytmCebaowtfX1YE75GfmSgxD/HUa6zehxHOjflPk94qxThKm9rxezy0+HIyD4ONY9w7mQ6PhMewyKlqyGmRTsuHcLpe2PDAsYdiHRPSN+JfOXIlKXUl/+Inot94mI6MPEJyKiT7PA7Ryxx2loT/1fz/O3Xqe5/bM2qFkAAAAASUVORK5CYII=" alt="">
+              </div>
+            </div>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_6 is-right ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span"><span data-v-0abbdf5a="" data-v-70792e1d="">0.0000</span> MDX </span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_7  ">
+          <div class="cell">
+            <div data-v-70792e1d="" class="btn-icon">
+              <span data-v-70792e1d="" class="span">Stake</span><span data-v-70792e1d="">|</span><a data-v-70792e1d="" href="https://ht.mdex.co/#/swap?lang=en&amp;inputCurrency=0x5545153ccfca01fbd7dd11c0b23ba694d9509a6f&amp;outputCurrency=0xa71edc38d189767582c38a3145b5873052c3e47a" target="_blank" class="span">Trade</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+          <div class="cell">
+            <div data-v-70792e1d="" class="Trades-one">
+              <img data-v-70792e1d="" src="https://mdex.co/token-icons/heco/lp/0x78c90d3f8a64474982417cdb490e840c01e516d4.png"><span data-v-70792e1d="" class="td-span numbers SemiBold" style="margin-left: 10px;"> ETH/USDT</span>
+            </div>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_2  ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span"><span data-v-0abbdf5a="" data-v-70792e1d="">55,634.92</span> MDX </span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_3  ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span"><span data-v-0abbdf5a="" data-v-70792e1d="">1,669,047.55</span> MDX </span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_4  ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span">  $<span data-v-0abbdf5a="" data-v-70792e1d="">102.02M</span></span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_5  ">
+          <div class="cell">
+            <div data-v-70792e1d="" class="apy-class"><span data-v-0abbdf5a="" data-v-70792e1d="">36.04</span>% <!---->
+              <div data-v-70792e1d="" class="topic">
+                <img data-v-70792e1d="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADtklEQVRYR8VXW0xUVxRde+517sRxtOJjRlqFUBQi8UW0QagVjYjVFsSa/rQ1/eiPbyXGxJiSFCMmNbGMjZgYjf4YE6MgVsSkVWhNyCgJNSpvYklVQInG8BAGmdnmHjrjzICcO4Rm5mM+9l177XX2PnufcwgGf0m1F82Nzc9WMXuziHk+QNHMiNbdidAGcBsT1RGZribMtVfUJn09YISaZCBr2QlHf/9gHgjfgHmyDC++E3WBcd5iUfN7N2zvGM3nvQLirx/XWt18kL2cC8BqKPBwUC+Z6FisRodb1u9yj8QxogB91W73YAkzp4wxcJAbEbk0Tc0ZKRvDBJhLCxd6PFQG5o/GI7ifg+iJovCGgew99wN5gwSIersHq8c9uC8i0ROLpi4LzIRfgKh5P1eOV9rflz29HLEWSvftCb8AtcSZz17+0Uja1zti8YUjDjHWydAJ6rpewPWyA5eeNhtxB5no0GDO7jzRMPrfUKu9aZHtdptqRllaNlKnifYf9qt60YZv797Av33dMiG9FsuEeL0UQoBy2VkE8FaZ12+p2fjcETsqTBeR/ucleMESOjrp+Wr3NtInXENje6dsyCTapuJhxhZB6mVGQcNdVHQ+hokIadOicSBhGTRFFd+zqkpxvaN1dAFEXYkJs2aQeuXXTPZ4bshWnzs3GT8vWCFg51pr8UPNH0EuBUlp2J+wVNgO1d/BT/UuGSVIUdaRUuI8AS9vk6FTohy4lroRmqIg+eZ5NPe8CnIpTvkSWdFxwpZf70J+/R0ZJWCiIlKLCyuYkS5HAx9M0ETKXw70++F2bSLOLl2LtfYYv+2TWxdQ8+q5lJIIlaQWOxuZeZ4UPQJgvi0Kv6/YBLvl3VFxvOVv5N7/yxAdETWRctnZDfAkQx4hoIcZ3yHRFiWsHvbiSEO1qL1s/7+joZ4xC8iYOQfln+YIru43A9jsuoabnY/DWwehe8wl2BufjKMLh7qisLkG+x7cDi+4uDZQU1ibMDDCzo8X45dFK4Upr7YKBY3VYxCASsNtGMo+y2JF6fIs0ZYbq67in9ddYQsYakODgyh8drmHGERGR3Eo3WfTP8Sp5DUwm0zYca9CPnpDCXyjWLcbPYwCOeoytmCebaowtfX1YE75GfmSgxD/HUa6zehxHOjflPk94qxThKm9rxezy0+HIyD4ONY9w7mQ6PhMewyKlqyGmRTsuHcLpe2PDAsYdiHRPSN+JfOXIlKXUl/+Inot94mI6MPEJyKiT7PA7Ryxx2loT/1fz/O3Xqe5/bM2qFkAAAAASUVORK5CYII=" alt="">
+              </div>
+            </div>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_6 is-right ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span"><span data-v-0abbdf5a="" data-v-70792e1d="">0.0000</span> MDX </span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_7  ">
+          <div class="cell">
+            <div data-v-70792e1d="" class="btn-icon">
+              <span data-v-70792e1d="" class="span">Stake</span><span data-v-70792e1d="">|</span><a data-v-70792e1d="" href="https://ht.mdex.co/#/swap?lang=en&amp;inputCurrency=0x64ff637fb478863b7468bc97d30a5bf3a428a1fd&amp;outputCurrency=0xa71edc38d189767582c38a3145b5873052c3e47a" target="_blank" class="span">Trade</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+          <div class="cell">
+            <div data-v-70792e1d="" class="Trades-one">
+              <img data-v-70792e1d="" src="https://mdex.co/token-icons/heco/lp/0xbebb01b1b126683bfe67607b24a803754de9a6fe.png"><span data-v-70792e1d="" class="td-span numbers SemiBold" style="margin-left: 10px;"> CON/USDT</span>
+            </div>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_2  ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span"><span data-v-0abbdf5a="" data-v-70792e1d="">103.10</span> MDX </span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_3  ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span"><span data-v-0abbdf5a="" data-v-70792e1d="">3,093.12</span> MDX </span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_4  ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span">  $<span data-v-0abbdf5a="" data-v-70792e1d="">769&nbsp;444</span></span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_5  ">
+          <div class="cell">
+            <div data-v-70792e1d="" class="apy-class"><span data-v-0abbdf5a="" data-v-70792e1d="">8.88</span>% <!---->
+              <div data-v-70792e1d="" class="topic">
+                <img data-v-70792e1d="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADtklEQVRYR8VXW0xUVxRde+517sRxtOJjRlqFUBQi8UW0QagVjYjVFsSa/rQ1/eiPbyXGxJiSFCMmNbGMjZgYjf4YE6MgVsSkVWhNyCgJNSpvYklVQInG8BAGmdnmHjrjzICcO4Rm5mM+9l177XX2PnufcwgGf0m1F82Nzc9WMXuziHk+QNHMiNbdidAGcBsT1RGZribMtVfUJn09YISaZCBr2QlHf/9gHgjfgHmyDC++E3WBcd5iUfN7N2zvGM3nvQLirx/XWt18kL2cC8BqKPBwUC+Z6FisRodb1u9yj8QxogB91W73YAkzp4wxcJAbEbk0Tc0ZKRvDBJhLCxd6PFQG5o/GI7ifg+iJovCGgew99wN5gwSIersHq8c9uC8i0ROLpi4LzIRfgKh5P1eOV9rflz29HLEWSvftCb8AtcSZz17+0Uja1zti8YUjDjHWydAJ6rpewPWyA5eeNhtxB5no0GDO7jzRMPrfUKu9aZHtdptqRllaNlKnifYf9qt60YZv797Av33dMiG9FsuEeL0UQoBy2VkE8FaZ12+p2fjcETsqTBeR/ucleMESOjrp+Wr3NtInXENje6dsyCTapuJhxhZB6mVGQcNdVHQ+hokIadOicSBhGTRFFd+zqkpxvaN1dAFEXYkJs2aQeuXXTPZ4bshWnzs3GT8vWCFg51pr8UPNH0EuBUlp2J+wVNgO1d/BT/UuGSVIUdaRUuI8AS9vk6FTohy4lroRmqIg+eZ5NPe8CnIpTvkSWdFxwpZf70J+/R0ZJWCiIlKLCyuYkS5HAx9M0ETKXw70++F2bSLOLl2LtfYYv+2TWxdQ8+q5lJIIlaQWOxuZeZ4UPQJgvi0Kv6/YBLvl3VFxvOVv5N7/yxAdETWRctnZDfAkQx4hoIcZ3yHRFiWsHvbiSEO1qL1s/7+joZ4xC8iYOQfln+YIru43A9jsuoabnY/DWwehe8wl2BufjKMLh7qisLkG+x7cDi+4uDZQU1ibMDDCzo8X45dFK4Upr7YKBY3VYxCASsNtGMo+y2JF6fIs0ZYbq67in9ddYQsYakODgyh8drmHGERGR3Eo3WfTP8Sp5DUwm0zYca9CPnpDCXyjWLcbPYwCOeoytmCebaowtfX1YE75GfmSgxD/HUa6zehxHOjflPk94qxThKm9rxezy0+HIyD4ONY9w7mQ6PhMewyKlqyGmRTsuHcLpe2PDAsYdiHRPSN+JfOXIlKXUl/+Inot94mI6MPEJyKiT7PA7Ryxx2loT/1fz/O3Xqe5/bM2qFkAAAAASUVORK5CYII=" alt="">
+              </div>
+            </div>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_6 is-right ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span"><span data-v-0abbdf5a="" data-v-70792e1d="">0.0000</span> MDX </span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_7  ">
+          <div class="cell">
+            <div data-v-70792e1d="" class="btn-icon">
+              <span data-v-70792e1d="" class="span">Stake</span><span data-v-70792e1d="">|</span><a data-v-70792e1d="" href="https://ht.mdex.co/#/swap?lang=en&amp;inputCurrency=0xa71edc38d189767582c38a3145b5873052c3e47a&amp;outputCurrency=0xeef1324343ca7bf6e743e21dd9e92dfa4efc3a56" target="_blank" class="span">Trade</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td rowspan="1" colspan="1" class="el-table_1_column_1 is-center ">
+          <div class="cell">
+            <div data-v-70792e1d="" class="Trades-one">
+              <img data-v-70792e1d="" src="https://mdex.co/token-icons/heco/lp/0xc95239fe2baabdbd15eec26805156e219b12ffce.png"><span data-v-70792e1d="" class="td-span numbers SemiBold" style="margin-left: 10px;"> DEP/HUSD</span>
+            </div>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_2  ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span"><span data-v-0abbdf5a="" data-v-70792e1d="">123.72</span> MDX </span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_3  ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span"><span data-v-0abbdf5a="" data-v-70792e1d="">3,711.74</span> MDX </span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_4  ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span">  $<span data-v-0abbdf5a="" data-v-70792e1d="">66&nbsp;166</span></span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_5  ">
+          <div class="cell">
+            <div data-v-70792e1d="" class="apy-class"><span data-v-0abbdf5a="" data-v-70792e1d="">123.89</span>% <!---->
+              <div data-v-70792e1d="" class="topic">
+                <img data-v-70792e1d="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADtklEQVRYR8VXW0xUVxRde+517sRxtOJjRlqFUBQi8UW0QagVjYjVFsSa/rQ1/eiPbyXGxJiSFCMmNbGMjZgYjf4YE6MgVsSkVWhNyCgJNSpvYklVQInG8BAGmdnmHjrjzICcO4Rm5mM+9l177XX2PnufcwgGf0m1F82Nzc9WMXuziHk+QNHMiNbdidAGcBsT1RGZribMtVfUJn09YISaZCBr2QlHf/9gHgjfgHmyDC++E3WBcd5iUfN7N2zvGM3nvQLirx/XWt18kL2cC8BqKPBwUC+Z6FisRodb1u9yj8QxogB91W73YAkzp4wxcJAbEbk0Tc0ZKRvDBJhLCxd6PFQG5o/GI7ifg+iJovCGgew99wN5gwSIersHq8c9uC8i0ROLpi4LzIRfgKh5P1eOV9rflz29HLEWSvftCb8AtcSZz17+0Uja1zti8YUjDjHWydAJ6rpewPWyA5eeNhtxB5no0GDO7jzRMPrfUKu9aZHtdptqRllaNlKnifYf9qt60YZv797Av33dMiG9FsuEeL0UQoBy2VkE8FaZ12+p2fjcETsqTBeR/ucleMESOjrp+Wr3NtInXENje6dsyCTapuJhxhZB6mVGQcNdVHQ+hokIadOicSBhGTRFFd+zqkpxvaN1dAFEXYkJs2aQeuXXTPZ4bshWnzs3GT8vWCFg51pr8UPNH0EuBUlp2J+wVNgO1d/BT/UuGSVIUdaRUuI8AS9vk6FTohy4lroRmqIg+eZ5NPe8CnIpTvkSWdFxwpZf70J+/R0ZJWCiIlKLCyuYkS5HAx9M0ETKXw70++F2bSLOLl2LtfYYv+2TWxdQ8+q5lJIIlaQWOxuZeZ4UPQJgvi0Kv6/YBLvl3VFxvOVv5N7/yxAdETWRctnZDfAkQx4hoIcZ3yHRFiWsHvbiSEO1qL1s/7+joZ4xC8iYOQfln+YIru43A9jsuoabnY/DWwehe8wl2BufjKMLh7qisLkG+x7cDi+4uDZQU1ibMDDCzo8X45dFK4Upr7YKBY3VYxCASsNtGMo+y2JF6fIs0ZYbq67in9ddYQsYakODgyh8drmHGERGR3Eo3WfTP8Sp5DUwm0zYca9CPnpDCXyjWLcbPYwCOeoytmCebaowtfX1YE75GfmSgxD/HUa6zehxHOjflPk94qxThKm9rxezy0+HIyD4ONY9w7mQ6PhMewyKlqyGmRTsuHcLpe2PDAsYdiHRPSN+JfOXIlKXUl/+Inot94mI6MPEJyKiT7PA7Ryxx2loT/1fz/O3Xqe5/bM2qFkAAAAASUVORK5CYII=" alt="">
+              </div>
+            </div>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_6 is-right ">
+          <div class="cell">
+            <span data-v-70792e1d="" class="td-span"><span data-v-0abbdf5a="" data-v-70792e1d="">0.0000</span> MDX </span>
+          </div>
+        </td>
+        <td rowspan="1" colspan="1" class="el-table_1_column_7  ">
+          <div class="cell">
+            <div data-v-70792e1d="" class="btn-icon">
+              <span data-v-70792e1d="" class="span">Stake</span><span data-v-70792e1d="">|</span><a data-v-70792e1d="" href="https://ht.mdex.co/#/swap?lang=en&amp;inputCurrency=0x0298c2b32eae4da002a15f36fdf7615bea3da047&amp;outputCurrency=0x48c859531254f25e57d1c1a8e030ef0b1c895c27" target="_blank" class="span">Trade</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+
+
+
+
+    </table>
+  </div>
+
+</main>
+  <footer class="footer-desktop">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-3">
+        <div class="foot-text-img">
+
+          <a href="#"><img src="img/icon/footer/mdex-footer-icon.png" alt=""></a>
+
+          <ul>
+            <li>
+              <a href="#"><img src="img/icon/footer/github-icon.png" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/icon/footer/medium-icon.png" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/icon/footer/telegram-icon.png" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/icon/footer/twitter-icon.png" alt=""></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/icon/footer/discord-icon.png" alt=""></a>
+            </li>
+          </ul>
+
+          <p>©2021 Mdex.com.All rights reserved</p>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="text-link">
+
+          <p>Application</p>
+
+          <ul>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSem595jWpO5_A5fRj9W4-wX_3mg3ypqqNiXcC_yi-tpcbOaqA/viewform" target="_blank">Listing Token</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSem595jWpO5_A5fRj9W4-wX_3mg3ypqqNiXcC_yi-tpcbOaqA/viewform" target="_blank">Liquidity Mining Whitelist</a></li>
+            <li><a href="https://forms.gle/b6SCc4cXzn7apFhk7" target="_blank">IMO Application</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdn9wYhf_jI01nNORQXWgiyGSPKcVTP4fCq2cLYBxINd35vuw/viewform" target="_blank">MDEX Ecological Fund Application</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="col-2">
+        <div  class="text-link"><p >Guide</p>
+          <ul>
+            <li><a href="https://ht.mdex.co/#/swap?lang=en" target="_blank">Swap</a></li>
+            <li><a href="https://ht.mdex.co/#/pool?lang=en" target="_blank">Pool</a></li>
+            <li><a href="https://info.mdex.co/" target="_blank">Info</a></li>
+            <li><a href="https://info.mdex.co/" target="_blank">Liquidity</a></li>
+            <li><a href="https://info.mdex.co/" target="_blank">Boardroom</a></li>
+            <li><a href="https://info.mdex.co/" target="_blank">Trading</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-2">
+        <div  class="text-link">
+          <p>Doc</p>
+          <ul>
+            <li><a href="https://mdexdoc.gitbook.io/doc//faq" target="_blank">FAQ</a></li>
+            <li><a href="https://mdexdoc.gitbook.io/doc/yong-hu-zhi-nan" target="_blank">User Guide</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="text-link">
+          <p>About</p>
+          <ul>
+            <li><a href="https://mdexdoc.gitbook.io/doc/gong-gao-1" target="_blank">Announcement</a></li>
+            <li><a href="https://mdexcom.zendesk.com/hc/en-gb/sections/360012110672-Adjustment-of-Pool" target="_blank">Adjustment of Pool</a></li>
+            <li><a href="#">Ecological Fund</a></li>
+            <li><a href="#">Bug Bounty Campaign</a></li>
+            <li><a href="https://mdexdoc.gitbook.io/doc/lian-xi-wo-men" target="_blank">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+<footer class="footer-mobile">
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">
+        <span class="icon icon-home"></span>
+        <span>Home</span>
+        
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <span class="icon icon-swap"></span>
+        <span>Swap</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <span class="icon icon-farm"></span>
+        <span>Farm</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <span class="icon icon-charts"></span>
+        <span class="badge badge-success">Beta</span>
+        <span>Charts</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <span class="icon icon-boardroom"></span>
+        <span>Boardroom</span>
+      </a>
+    </li>
+  </ul>
+</footer>
+	<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>-->
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+
+
+
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>

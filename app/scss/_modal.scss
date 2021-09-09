@@ -1,69 +1,98 @@
-.modal-content-wrapper {
-  font-size: 14px;
-  border-top-left-radius: 1em;
-  border-top-right-radius: 1em;
-  overflow: hidden;
-  button.active {
-    &:before {
-      position: absolute;
-      content: url("../img/check-icon.svg");
-      width: 12px;
-      height: 12px;
-      display: inline-block;
-      right: 1em;
-      top: 50%;
-      margin-top: -12px;
-    }
+/*Required*/
+@media (max-width: 576px){
+  .modal-dialog.modal-dialog-slideout {
+    width: 80%
   }
-  button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    padding: 1.14286em 0.857143em;
-    height: auto;
-    margin: 0;
-    text-align: left;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: 1px solid rgb(230, 232, 234);
-    border-image: initial;
-    outline: none;
-    text-decoration: none;
-    background-color: white;
-    &:first-child {
-      border-radius: 1em 1em 0 0;
+}
+.modal-dialog-slideout {
+  min-height: 100%;
+  margin: 0 auto 0 0 ;
+  background: #fff;
+}
+.modal.fade .modal-dialog.modal-dialog-slideout {
+  -webkit-transform: translate(-100%,0);
+  transform: translate(-100%,0);
+}
+.modal.fade.show .modal-dialog.modal-dialog-slideout {
+  -webkit-transform: translate(0,0);transform: translate(0,0);
+  flex-flow: column;
+}
+.modal-dialog-slideout .modal-content{
+  border: 0;
+}
+
+
+.slide-out-panel {
+  .modal-content {
+    height: 100vh;
+    background: #f0f2f3;
+
+    .modal-body {
+      .header {
+        background: #fff;
+        border-radius: 10px;
+        padding: 15px 0;
+
+
+
+        .item {
+          text-align: center;
+          //display: flex;
+          //flex-direction: column;
+          //justify-content: center;
+          //align-items: center;
+
+          width: 25%;
+          p {
+            margin-top: 10px;
+            margin-bottom: 0;
+            //color: #000;
+            font-size: 13px;
+            line-height: 1;
+          }
+
+          img {
+            width: 36px;
+            height: 36px;
+          }
+        }
+      }
+
+
+      .content {
+        background: #fff;
+        border-radius: 10px;
+        padding: 0 12px;
+        margin-top: 16px;
+        .item {
+          position: relative;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -8px;
+
+            display: block;
+            width: 16px;
+            height: 16px;
+            background: url("../img/icon/header/slide-out-panel/main/arr-right-aside-icon.png");
+            background-size: 16px;
+
+          }
+        }
+
+      }
     }
-    &:last-child {
-      border-radius: 0 0 1em 1em;
-    }
-    .title-suspended {
-      font-size: .75em;
-    }
-    &:hover {
-      background-color: rgba(240, 185, 11, 0.06);
-    }
-  }
-  .single-img {
-    margin-right: 0.5em;
-    img {
-      width: 2em;
-      height: 2em;
-    }
-  }
-  .option-desciption {
-    .option-symbol {
-      font-size: 1em;
-      color: rgb(30, 32, 38);
-      font-weight: bold;
-      line-height: normal;
-    }
-    .option-name {
-      font-size: 0.857143em;
-      color: rgb(118, 128, 143);
-      font-weight: 400;
-      line-height: normal;
-    }
+
+
   }
 }
