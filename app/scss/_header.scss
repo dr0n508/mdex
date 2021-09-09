@@ -1,21 +1,62 @@
-.navbar-brand {
-  max-width: 150px;
-  &:hover {
-    transform: rotate(-5deg);
+.main-header {
+  .burger-btn {
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+  }
+  .navbar-brand {
+    max-width: 150px;
+    &:hover {
+      transform: rotate(-5deg);
+    }
+  }
+  .btn-heco, .btn-connect-wallet {
+    font-size: 16px;
+    line-height: 1;
+    font-family: sans-serif;
+    height: 45px;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+  .btn-connect-wallet {
+    text-align: left;
+  }
+  .lang_bar {
+    img {
+      width: 36px;
+      height: 36px;
+    }
+  }
+  @media only screen and (max-width: 1400px) {
+    .nav-item {
+      .nav-link {
+        font-size: 14px;
+      }
+    }
+    .btn-heco, .btn-connect-wallet {
+      font-size: 14px;
+    }
+    .navbar-brand {
+      max-width: 120px;
+    }
   }
 }
+
+
+
+
+
+
 
 .navbar-nav {
   width: 100%;
 }
 
-.lang_bar {
-  img {
-    width: 36px;
-    height: 36px;
-    margin-left: 10px;
-  }
-}
+
 
 .w-bage {
   img {

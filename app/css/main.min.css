@@ -1,18 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.navbar-brand {
+.main-header .burger-btn img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px; }
+
+.main-header .navbar-brand {
   max-width: 150px; }
-  .navbar-brand:hover {
+  .main-header .navbar-brand:hover {
     -webkit-transform: rotate(-5deg);
         -ms-transform: rotate(-5deg);
             transform: rotate(-5deg); }
 
+.main-header .btn-heco, .main-header .btn-connect-wallet {
+  font-size: 16px;
+  line-height: 1;
+  font-family: sans-serif;
+  height: 45px;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.main-header .btn-connect-wallet {
+  text-align: left; }
+
+.main-header .lang_bar img {
+  width: 36px;
+  height: 36px; }
+
+@media only screen and (max-width: 1400px) {
+  .main-header .nav-item .nav-link {
+    font-size: 14px; }
+  .main-header .btn-heco, .main-header .btn-connect-wallet {
+    font-size: 14px; }
+  .main-header .navbar-brand {
+    max-width: 120px; } }
+
 .navbar-nav {
   width: 100%; }
-
-.lang_bar img {
-  width: 36px;
-  height: 36px;
-  margin-left: 10px; }
 
 .w-bage img {
   position: relative;
@@ -162,6 +193,14 @@
 @media only screen and (max-width: 350px) {
   .footer-mobile .nav-link {
     padding: .5rem .5rem; } }
+
+.btn {
+  text-transform: initial !important;
+  padding: 13px; }
+
+.btn-rounded {
+  -webkit-border-radius: 10em;
+          border-radius: 10em; }
 
 /*Required*/
 @media (max-width: 576px) {
